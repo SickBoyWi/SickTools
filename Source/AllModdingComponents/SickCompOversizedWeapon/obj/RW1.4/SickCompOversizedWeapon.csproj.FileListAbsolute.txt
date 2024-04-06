@@ -1,0 +1,5 @@
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\1.4\Assemblies\SickCompOversizedWeapon.dll
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompOversizedWeapon\obj\RW1.4\SickCompOversizedWeapon.AssemblyInfoInputs.cache
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompOversizedWeapon\obj\RW1.4\SickCompOversizedWeapon.AssemblyInfo.cs
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompOversizedWeapon\obj\RW1.4\SickCompOversizedWeapon.csproj.CoreCompileInputs.cache
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompOversizedWeapon\obj\RW1.4\SickCompOversizedWeapon.dll

@@ -1,0 +1,5 @@
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\1.4\Assemblies\SickAbilityUser.dll
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompAbilityUser\obj\RW1.4\SickCompAbilityUser.AssemblyInfoInputs.cache
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompAbilityUser\obj\RW1.4\SickCompAbilityUser.AssemblyInfo.cs
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompAbilityUser\obj\RW1.4\SickCompAbilityUser.csproj.CoreCompileInputs.cache
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompAbilityUser\obj\RW1.4\SickAbilityUser.dll

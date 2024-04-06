@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "6BMtg+RssET1J8pGMhKxbgWn9c3iM/VzhRG4kl8rY/MdG4eQ5Hn8BQcnD1zbB/vQ7Jdc35L/ydB8t6sb3IAk2A==",
+  "success": true,
+  "projectFilePath": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\SickTools\\Source\\AllModdingComponents\\SickCompAbilityUser\\SickCompAbilityUser.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\johnn\\.nuget\\packages\\krafs.rimworld.ref\\1.4.3901\\krafs.rimworld.ref.1.4.3901.nupkg.sha512",
+    "C:\\Users\\johnn\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512"
+  ],
+  "logs": []
+}

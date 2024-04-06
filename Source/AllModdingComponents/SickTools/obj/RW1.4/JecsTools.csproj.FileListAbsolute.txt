@@ -1,0 +1,7 @@
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\1.4\Assemblies\0JecsTools.dll
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\JecsTools\obj\RW1.4\JecsTools.csprojAssemblyReference.cache
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\JecsTools\obj\RW1.4\JecsTools.AssemblyInfoInputs.cache
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\JecsTools\obj\RW1.4\JecsTools.AssemblyInfo.cs
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\JecsTools\obj\RW1.4\JecsTools.csproj.CoreCompileInputs.cache
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\JecsTools\obj\RW1.4\JecsTools.csproj.CopyComplete
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\JecsTools\obj\RW1.4\0JecsTools.dll

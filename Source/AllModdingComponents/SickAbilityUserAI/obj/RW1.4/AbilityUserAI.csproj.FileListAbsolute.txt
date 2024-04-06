@@ -1,0 +1,7 @@
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\1.4\Assemblies\AbilityUserAI.dll
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\AbilityUserAI\obj\RW1.4\AbilityUserAI.csprojAssemblyReference.cache
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\AbilityUserAI\obj\RW1.4\AbilityUserAI.AssemblyInfoInputs.cache
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\AbilityUserAI\obj\RW1.4\AbilityUserAI.AssemblyInfo.cs
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\AbilityUserAI\obj\RW1.4\AbilityUserAI.csproj.CoreCompileInputs.cache
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\AbilityUserAI\obj\RW1.4\AbilityUserAI.csproj.CopyComplete
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\AbilityUserAI\obj\RW1.4\AbilityUserAI.dll
