@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <AU_NoTargets>指定可能な目標がありません。</AU_NoTargets>
+  <ST_NoTargets>指定可能な目標がありません。</ST_NoTargets>
 
-  <AU_DISABLED>機能停止</AU_DISABLED>
+  <ST_DISABLED>機能停止</ST_DISABLED>
 
-  <AU_Type>タイプ：</AU_Type>
-  <AU_TargetAoE>目標(範囲)</AU_TargetAoE>
-  <AU_TargetSelf>目標(自分)</AU_TargetSelf>
-  <AU_TargetThing>目標(他者)</AU_TargetThing>
-  <AU_TargetLocation>目標(場所)</AU_TargetLocation>
-  <AU_Cooldown>クールダウン：</AU_Cooldown>
-  <AU_Extra>特殊</AU_Extra>
-  <AU_MentalStateChance>精神状態変化率</AU_MentalStateChance>
-  <AU_EffectChance>影響確率</AU_EffectChance>
-  <AU_PawnAbilityRecharging>{0}は回復する時間が必要</AU_PawnAbilityRecharging>
+  <ST_Type>タイプ：</ST_Type>
+  <ST_TargetAoE>目標(範囲)</ST_TargetAoE>
+  <ST_TargetSelf>目標(自分)</ST_TargetSelf>
+  <ST_TargetThing>目標(他者)</ST_TargetThing>
+  <ST_TargetLocation>目標(場所)</ST_TargetLocation>
+  <ST_Cooldown>クールダウン：</ST_Cooldown>
+  <ST_Extra>特殊</ST_Extra>
+  <ST_MentalStateChance>精神状態変化率</ST_MentalStateChance>
+  <ST_EffectChance>影響確率</ST_EffectChance>
+  <ST_PawnAbilityRecharging>{0}は回復する時間が必要</ST_PawnAbilityRecharging>
 
 
-  <AU_AoEProperties>影響範囲の詳細</AU_AoEProperties>
-  <AU_TargetClass>目標：</AU_TargetClass>
-  <AU_AoECharacters>キャラクター</AU_AoECharacters>
-  <AU_AoEFriendlyFire>味方への誤射：</AU_AoEFriendlyFire>
-  <AU_AoEMaxTargets>最大目標数：</AU_AoEMaxTargets>
-  <AU_AoEStartsFromCaster>使用者から開始：</AU_AoEStartsFromCaster>
+  <ST_AoEProperties>影響範囲の詳細</ST_AoEProperties>
+  <ST_TargetClass>目標：</ST_TargetClass>
+  <ST_AoECharacters>キャラクター</ST_AoECharacters>
+  <ST_AoEFriendlyFire>味方への誤射：</ST_AoEFriendlyFire>
+  <ST_AoEMaxTargets>最大目標数：</ST_AoEMaxTargets>
+  <ST_AoEStartsFromCaster>使用者から開始：</ST_AoEStartsFromCaster>
 
 </LanguageData>

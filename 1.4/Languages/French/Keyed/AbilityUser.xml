@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-<AU_DISABLED>DISABLED</AU_DISABLED>
+<ST_DISABLED>DISABLED</ST_DISABLED>
 
-<AU_Type>Type: </AU_Type>
-<AU_TargetAoE>Zone d'effet</AU_TargetAoE>
-<AU_TargetSelf>Cibler (moi)</AU_TargetSelf>
-<AU_TargetThing>Cibler (autres)</AU_TargetThing>
-<AU_TargetLocation>Emplacement de la cible</AU_TargetLocation>
-<AU_Cooldown>Recharge: </AU_Cooldown>
-<AU_Extra>Extra</AU_Extra>
-<AU_MentalStateChance>probabilité d'état mental</AU_MentalStateChance>
-<AU_EffectChance>probabilité d'effet</AU_EffectChance>
-<AU_PawnAbilityRecharging>{0} a besoin de temps pour recharger</AU_PawnAbilityRecharging>
+<ST_Type>Type: </ST_Type>
+<ST_TargetAoE>Zone d'effet</ST_TargetAoE>
+<ST_TargetSelf>Cibler (moi)</ST_TargetSelf>
+<ST_TargetThing>Cibler (autres)</ST_TargetThing>
+<ST_TargetLocation>Emplacement de la cible</ST_TargetLocation>
+<ST_Cooldown>Recharge: </ST_Cooldown>
+<ST_Extra>Extra</ST_Extra>
+<ST_MentalStateChance>probabilité d'état mental</ST_MentalStateChance>
+<ST_EffectChance>probabilité d'effet</ST_EffectChance>
+<ST_PawnAbilityRecharging>{0} a besoin de temps pour recharger</ST_PawnAbilityRecharging>
 
 
-<AU_AoEProperties>Propriétés de la zone d'effet</AU_AoEProperties>
-<AU_TargetClass>Cibles: </AU_TargetClass>
-<AU_AoECharacters>Personnages</AU_AoECharacters>
-<AU_AoEFriendlyFire>Tir amie: </AU_AoEFriendlyFire>
-<AU_AoEMaxTargets>Nombre de cibles maximal: </AU_AoEMaxTargets>
-<AU_AoEStartsFromCaster>Se déclenche a partir du sorcier: </AU_AoEStartsFromCaster>
+<ST_AoEProperties>Propriétés de la zone d'effet</ST_AoEProperties>
+<ST_TargetClass>Cibles: </ST_TargetClass>
+<ST_AoECharacters>Personnages</ST_AoECharacters>
+<ST_AoEFriendlyFire>Tir amie: </ST_AoEFriendlyFire>
+<ST_AoEMaxTargets>Nombre de cibles maximal: </ST_AoEMaxTargets>
+<ST_AoEStartsFromCaster>Se déclenche a partir du sorcier: </ST_AoEStartsFromCaster>
 	
 </LanguageData>

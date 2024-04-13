@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-<AU_NoLineOfSight>No line of sight</AU_NoLineOfSight>
+<!-- Ability Stuff -->
+<ST_NoLineOfSight>No line of sight</ST_NoLineOfSight>
 
-<AU_NoTargets>No targets available</AU_NoTargets>
+<ST_NoTargets>No targets available</ST_NoTargets>
 
-<AU_DISABLED>DISABLED</AU_DISABLED>
+<ST_DISABLED>DISABLED</ST_DISABLED>
 
-<AU_Type>Type: </AU_Type>
-<AU_TargetAoE>Area of Effect</AU_TargetAoE>
-<AU_TargetSelf>Targets Self</AU_TargetSelf>
-<AU_TargetThing>Targets Other</AU_TargetThing>
-<AU_TargetLocation>Targets Location</AU_TargetLocation>
-<AU_Cooldown>Cooldown: </AU_Cooldown>
-<AU_Extra>Extra</AU_Extra>
-<AU_MentalStateChance>Mental State Chance</AU_MentalStateChance>
-<AU_EffectChance>Effect Chance</AU_EffectChance>
-<AU_PawnAbilityRecharging>{0} needs time to recharge</AU_PawnAbilityRecharging>
+<ST_Type>Type: </ST_Type>
+<ST_TargetAoE>Area of Effect</ST_TargetAoE>
+<ST_TargetSelf>Targets Self</ST_TargetSelf>
+<ST_TargetThing>Targets Other</ST_TargetThing>
+<ST_TargetLocation>Targets Location</ST_TargetLocation>
+<ST_Cooldown>Cooldown: </ST_Cooldown>
+<ST_Extra>Extra</ST_Extra>
+<ST_MentalStateChance>Mental State Chance</ST_MentalStateChance>
+<ST_EffectChance>Effect Chance</ST_EffectChance>
+<ST_PawnAbilityRecharging>{0} needs time to recharge</ST_PawnAbilityRecharging>
 
+<ST_AoEProperties>Area of Effect Properties</ST_AoEProperties>
+<ST_TargetClass>Targets: </ST_TargetClass>
+<ST_AoECharacters>Characters</ST_AoECharacters>
+<ST_AoEFriendlyFire>Friendly Fire: </ST_AoEFriendlyFire>
+<ST_AoEMaxTargets>Max Targets: </ST_AoEMaxTargets>
+<ST_AoEStartsFromCaster>Starts from caster: </ST_AoEStartsFromCaster>
 
-<AU_AoEProperties>Area of Effect Properties</AU_AoEProperties>
-<AU_TargetClass>Targets: </AU_TargetClass>
-<AU_AoECharacters>Characters</AU_AoECharacters>
-<AU_AoEFriendlyFire>Friendly Fire: </AU_AoEFriendlyFire>
-<AU_AoEMaxTargets>Max Targets: </AU_AoEMaxTargets>
-<AU_AoEStartsFromCaster>Starts from caster: </AU_AoEStartsFromCaster>
+<!-- BELOW THIS HAS NOT BEEN TRANSLATED -->
+<ST_PlaceWorker_UnderCeiling>Must be placed under a roof.</ST_PlaceWorker_UnderCeiling>
+
 	
 </LanguageData>
