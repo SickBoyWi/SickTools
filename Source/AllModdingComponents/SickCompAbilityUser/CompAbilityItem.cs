@@ -24,7 +24,7 @@ namespace SickAbilityUser
 
         public virtual Graphic GetOverlayGraphic()
         {
-            // TODO: Remove - UI/Glow_Corrupt texture was never added to JecsTools.
+            // TODO: Remove - UI/Glow_Corrupt texture was never added.
             //return GraphicDatabase.Get<Graphic_Single>("UI/Glow_Corrupt", ShaderDatabase.MetaOverlay, Vector2.one, Color.white);
             return null;
         }

@@ -266,7 +266,7 @@ namespace SickAbilityUser
 
                 //hitThing.TakeDamage(dinfo);
                 if (canStartFire && Rand.Range(0f, 1f) > startFireChance)
-                    hitThing.TryAttachFire(0.05f);
+                    hitThing.TryAttachFire(0.05f, launcher);
                 if (hitThing is Pawn pawn)
                 {
                     PostImpactEffects(launcher as Pawn, pawn);
@@ -299,7 +299,7 @@ namespace SickAbilityUser
         /// <summary>
         ///     Draws the laser ray.
         /// </summary>
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             Comps_PostDraw();
             Graphics.DrawMesh(MeshPool.plane10, drawingMatrix,

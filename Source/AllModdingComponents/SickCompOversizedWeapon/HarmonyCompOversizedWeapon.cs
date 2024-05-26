@@ -11,18 +11,18 @@ namespace SickCompOversizedWeapon
     {
         static HarmonyCompOversizedWeapon()
         {
-            var harmony = new Harmony("jecstools.jecrell.comps.oversized");
+            var harmony = new Harmony("sicktools.comps.oversized");
             var type = typeof(HarmonyCompOversizedWeapon);
             //var CarnySenpaiEnableOversizedWeaponsModLoaded = ModsConfig.IsActive("CarnySenpai.EnableOversizedWeapons");
 
            // if (CarnySenpaiEnableOversizedWeaponsModLoaded)
            // {
-            //    Log.Message("JecsTools:: Using Carny Senpai's Enable Oversized Weapons instead of CompOversizedWeapon");
+            //    Log.Message("SickTools: Using Carny Senpai's Enable Oversized Weapons instead of CompOversizedWeapon");
             //    return;
             //}
-            //Log.Warning("JecsTools CompOversizedWeapon Loaded:: This component is no longer recommended for performance. Please see Carny Senpai's Enable Oversized Weapons mod. Once the Carny Senpai's mod is loaded, it will be used instead of CompOversizedWeapon");
+            //Log.Warning("SickTools CompOversizedWeapon Loaded:: This component is no longer recommended for performance. Please see Carny Senpai's Enable Oversized Weapons mod. Once the Carny Senpai's mod is loaded, it will be used instead of CompOversizedWeapon");
 
-            harmony.Patch(AccessTools.Method(typeof(PawnRenderer), nameof(PawnRenderer.DrawEquipmentAiming)),
+            harmony.Patch(AccessTools.Method(typeof(PawnRenderUtility), nameof(PawnRenderUtility.DrawEquipmentAiming)),
                 prefix: new HarmonyMethod(type, nameof(DrawEquipmentAimingPreFix)));
             harmony.Patch(AccessTools.PropertyGetter(typeof(Thing), nameof(Thing.DefaultGraphic)),
                 postfix: new HarmonyMethod(type, nameof(get_DefaultGraphic_PostFix)));
@@ -30,10 +30,12 @@ namespace SickCompOversizedWeapon
 
         /// <summary>
         ///     Adds another "layer" to the equipment aiming if they have a
-        ///     weapon with a CompActivatableEffect.
+        ///     weapon with a CompActivatableEffect.  WAS FIRST PARAM:Pawn ___pawn, 
         /// </summary>
-        public static bool DrawEquipmentAimingPreFix(Pawn ___pawn, Thing eq, Vector3 drawLoc, float aimAngle)
+        public static bool DrawEquipmentAimingPreFix(Thing eq, Vector3 drawLoc, float aimAngle)
         {
+            Pawn wielder = (eq.ParentHolder as Pawn_EquipmentTracker)?.pawn;
+
             var compOversizedWeapon = eq.TryGetCompOversizedWeapon();
             if (compOversizedWeapon == null)
                 return true;
@@ -64,9 +66,9 @@ namespace SickCompOversizedWeapon
             // end copied vanilla code
 
             var props = compOversizedWeapon.Props;
-            var rotation = ___pawn.Rotation;
+            var rotation = wielder.Rotation;
 
-            if (props != null && !___pawn.IsFighting()) // at peace
+            if (props != null && !wielder.IsFighting()) // at peace
             {
                 if (aimingSouth && props.verticalFlipOutsideCombat)
                     angle += 180f;

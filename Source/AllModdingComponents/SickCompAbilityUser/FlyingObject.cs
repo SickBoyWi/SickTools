@@ -181,17 +181,18 @@ namespace SickAbilityUser
             }
         }
 
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             if (flyingThing != null)
             {
                 if (flyingThing is Pawn pawn)
                 {
-                    pawn.Drawer.DrawAt(DrawPos);
+                    //pawn.Drawer.DrawAt(drawLoc, flip);
+                    pawn.Drawer.renderer.RenderPawnAt(drawLoc, new Rot4?(), flip);
                 }
                 else
                 {
-                    Graphics.DrawMesh(MeshPool.plane10, DrawPos, ExactRotation, flyingThing.def.DrawMatSingle, 0);
+                    Graphics.DrawMesh(MeshPool.plane10, drawLoc, ExactRotation, flyingThing.def.DrawMatSingle, 0);
                 }
                 Comps_PostDraw();
             }

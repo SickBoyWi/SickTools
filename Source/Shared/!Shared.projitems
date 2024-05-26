@@ -8,10 +8,4 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>Shared</Import_RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Content Include="..\..\**\*" Exclude="..\..\.git\**\*;..\..\Source\**\*">
-      <Link>ModFolder\%(RecursiveDir)%(Filename)%(Extension)</Link>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
 </Project>

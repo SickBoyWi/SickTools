@@ -7,7 +7,7 @@ using HarmonyLib;
 
 namespace SickPawnShields
 {
-    // Code copied between JecsTools and PawnShields - keep them in sync!
+    // Code copied between Here and PawnShields - keep them in sync!
     public static class HarmonyExtensions
     {
         public static void SafeInsertRange(this List<CodeInstruction> instructions, int insertionIndex, IEnumerable<CodeInstruction> newInstructions,

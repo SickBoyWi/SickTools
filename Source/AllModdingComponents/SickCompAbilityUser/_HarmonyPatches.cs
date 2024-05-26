@@ -16,7 +16,7 @@ namespace SickAbilityUser
     {
         public AbilityUserMod(ModContentPack content) : base(content)
         {
-            var harmony = new Harmony("jecstools.jecrell.abilityuser");
+            var harmony = new Harmony("sicktools.abilityuser");
             var type = typeof(AbilityUserMod);
 
             harmony.Patch(AccessTools.Method(typeof(Targeter), nameof(Targeter.TargeterUpdate)),
