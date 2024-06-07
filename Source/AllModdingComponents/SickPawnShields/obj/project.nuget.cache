@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "0Kw3lwYxnWVPLKw79xpoCFsxGjGkhUvhzb0OvUHkxCP6SOt0v1jND1ALsC0XVYxMKLELWBKfNT2g4YXK7+BX9A==",
+  "success": true,
+  "projectFilePath": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\SickTools\\Source\\AllModdingComponents\\SickPawnShields\\SickPawnShields.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\johnn\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4104\\krafs.rimworld.ref.1.5.4104.nupkg.sha512",
+    "C:\\Users\\johnn\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512"
+  ],
+  "logs": []
+}
