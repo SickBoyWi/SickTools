@@ -283,7 +283,7 @@ namespace SickAbilityUser
             var hitPawn = hitThing as Pawn;
             if (hitPawn?.stances != null && hitPawn.BodySize <= def.projectile.stoppingPower + 0.001f)
             {
-                hitPawn.stances.StaggerFor(95);
+                hitPawn.stances.stagger.StaggerFor(95);
             }
         }
 

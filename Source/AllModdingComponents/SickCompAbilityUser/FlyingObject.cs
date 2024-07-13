@@ -181,18 +181,21 @@ namespace SickAbilityUser
             }
         }
 
+        /// <summary>
+        /// In 1.4, this was previously public override void Draw().
+        /// Now we use DrawAt instead.
+        /// </summary>
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             if (flyingThing != null)
             {
                 if (flyingThing is Pawn pawn)
                 {
-                    //pawn.Drawer.DrawAt(drawLoc, flip);
-                    pawn.Drawer.renderer.RenderPawnAt(drawLoc, new Rot4?(), flip);
+                    pawn.Drawer.renderer.RenderPawnAt(DrawPos);
                 }
                 else
                 {
-                    Graphics.DrawMesh(MeshPool.plane10, drawLoc, ExactRotation, flyingThing.def.DrawMatSingle, 0);
+                    Graphics.DrawMesh(MeshPool.plane10, DrawPos, ExactRotation, flyingThing.def.DrawMatSingle, 0);
                 }
                 Comps_PostDraw();
             }
@@ -252,28 +255,28 @@ namespace SickAbilityUser
                     effecter.Cleanup();
                 }
                 GenExplosion.DoExplosion(
-                    center: pos, 
+                    center: pos,
                     map,
                     props.explosionRadius,
                     props.damageDef,
-                    instigator: this, 
+                    instigator: this,
                     props.GetDamageAmount(1f),
                     props.GetArmorPenetration(1f),
-                    props.soundExplode, 
-                    weapon: null, 
-                    projectile: null, 
+                    props.soundExplode,
+                    weapon: null,
+                    projectile: null,
                     intendedTarget: null,
                     props.postExplosionSpawnThingDef,
                     props.postExplosionSpawnChance,
                     props.postExplosionSpawnThingCount,
                     props.postExplosionGasType,
                     props.applyDamageToExplosionCellsNeighbors,
-                    props.preExplosionSpawnThingDef, 
+                    props.preExplosionSpawnThingDef,
                     props.preExplosionSpawnChance,
-                    props.preExplosionSpawnThingCount, 
+                    props.preExplosionSpawnThingCount,
                     props.explosionChanceToStartFire,
-                    props.explosionDamageFalloff, 
-                    direction: null, 
+                    props.explosionDamageFalloff,
+                    direction: null,
                     ignoredThings: null);
             }
 

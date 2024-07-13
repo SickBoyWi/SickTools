@@ -7,7 +7,7 @@ using Verse;
  */
 
 namespace SickAbilityUserAI
-{
+{    
     /// <summary>
     ///     Represents the weight of a tag.
     /// </summary>

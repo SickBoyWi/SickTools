@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using HarmonyLib;
 using RimWorld;
+using RimWorld.Planet;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -28,6 +29,7 @@ namespace SickAbilityUser
 
             // Initializes the AbilityUsers on Pawns
             harmony.Patch(AccessTools.Method(typeof(ThingWithComps), nameof(ThingWithComps.InitializeComps)),
+                //prefix: new HarmonyMethod(type, nameof(InitializeComps_PreFix)),
                 postfix: new HarmonyMethod(type, nameof(InitializeComps_PostFix)));
 
             harmony.Patch(AccessTools.Method(typeof(ShortHashGiver), "GiveShortHash"),
@@ -492,6 +494,37 @@ namespace SickAbilityUser
             if (__instance is Pawn p)
                 InternalAddInAbilityUsers(p);
         }
+
+        //public static void InitializeComps_PreFix(ThingWithComps __instance, ref List<ThingComp> ___comps)
+        //{
+        //    if (!__instance.def.comps.Any<CompProperties>())
+        //        return;
+        //    ___comps = new List<ThingComp>();
+        //    for (int index = 0; index < __instance.def.comps.Count; ++index)
+        //    {
+        //        ThingComp thingComp = (ThingComp)null;
+        //        try
+        //        {
+        //            thingComp = (ThingComp)Activator.CreateInstance(__instance.def.comps[index].compClass);
+        //            thingComp.parent = __instance;
+        //            ___comps.Add(thingComp);
+        //            thingComp.Initialize(__instance.def.comps[index]);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            Log.Error("Could not instantiate or initialize a ThingComp: " + (object)ex);
+
+
+        //            Log.Error("================INNER==================>" + ex.InnerException);
+        //            Log.Error("================INNER 2==================>" + ex.InnerException?.InnerException);
+        //            Log.Error("================INNER 3==================>" + ex.InnerException.InnerException?.InnerException);
+        //            Log.Error("================INNER 4==================>" + ex.InnerException.InnerException?.InnerException?.InnerException);
+
+        //            ___comps.Remove(thingComp);
+        //        }
+        //    }
+
+        //}
 
         // Add in any AbilityUser Components, if the Pawn is accepting
         public static void InternalAddInAbilityUsers(Pawn pawn)

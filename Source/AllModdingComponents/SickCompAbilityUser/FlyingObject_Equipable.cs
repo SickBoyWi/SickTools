@@ -11,7 +11,7 @@ namespace SickAbilityUser
             if (flyingThing != null)
             {
                 GenSpawn.Spawn(flyingThing, Position, Map);
-                if (launcher is Pawn {equipment: not null} equipper && flyingThing is ThingWithComps flyingThingWithComps)
+                if (launcher is Pawn { equipment: not null } equipper && flyingThing is ThingWithComps flyingThingWithComps)
                     Equip(equipper, flyingThingWithComps);
             }
             Destroy();

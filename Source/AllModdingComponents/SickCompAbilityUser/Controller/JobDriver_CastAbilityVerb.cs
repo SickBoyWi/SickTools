@@ -92,10 +92,10 @@ namespace SickAbilityUser
                             if (flag)
                             {
                                 if (thingList[j] is Pawn pawn &&
-                                    !pawn.Downed && 
+                                    !pawn.Downed &&
                                     searcher.HostileTo(pawn) &&
                                     !searcher.ThreatDisabledBecauseNonAggressiveRoamer(pawn) &&
-                                    GenHostility.IsActiveThreatTo(pawn,searcher.Faction))
+                                    GenHostility.IsActiveThreatTo(pawn, searcher.Faction))
                                 {
                                     searcher.meleeVerbs.TryMeleeAttack(pawn, null, false);
                                     //this.collideWithPawns = true;
@@ -105,10 +105,10 @@ namespace SickAbilityUser
                             if (flag2)
                             {
                                 if (thingList[j] is Fire fire2 &&
-                                fire2 != null && 
-                                (fire == null || fire2.fireSize < fire.fireSize || i == 8) 
+                                fire2 != null &&
+                                (fire == null || fire2.fireSize < fire.fireSize || i == 8)
                                 && (fire2.parent == null || fire2.parent != searcher))
-                                    {
+                                {
                                     fire = fire2;
                                 }
                             }

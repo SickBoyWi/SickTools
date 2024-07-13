@@ -129,7 +129,7 @@ namespace SickPawnShields
         /// <param name="pawn">Shield bearer.</param>
         public virtual void RenderShield(Vector3 loc, Rot4 rot, Pawn pawn, Thing thing)
         {
-            if (!ShieldProps.renderProperties.renderWhenPeaceful && !pawnRendererCarryWeaponOpenly(pawn.Drawer.renderer))
+            if (!ShieldProps.renderProperties.renderWhenPeaceful && !PawnRenderUtility.CarryWeaponOpenly(pawn))
                 return;
 
             if (ShieldProps.wieldedGraphic != null && ShieldProps.wieldedGraphic.Graphic.MatSingle != null)
@@ -172,8 +172,10 @@ namespace SickPawnShields
         }
 
         // Note: This is an open instance delegate where the first argument is the instance.
-        private static readonly Func<PawnRenderer, bool> pawnRendererCarryWeaponOpenly =
-            (Func<PawnRenderer, bool>)AccessTools.Method(typeof(PawnRenderer), "CarryWeaponOpenly")
-            .CreateDelegate(typeof(Func<PawnRenderer, bool>));
+        // This previously used PawnRenderer . CarryWeaponOpenly, but in 1.5 that was moved to the
+        // current call below, which breaks this, because PawnRenderUtility is static.
+        //private static readonly Func<PawnRenderUtility, bool> PawnRenderUtilityCarryWeaponOpenly =
+        //    (Func<PawnRenderUtility, bool>)AccessTools.Method(typeof(PawnRenderUtility), "CarryWeaponOpenly")
+        //    .CreateDelegate(typeof(Func<PawnRenderUtility, bool>));
     }
 }

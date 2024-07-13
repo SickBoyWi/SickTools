@@ -125,7 +125,8 @@ namespace SickPawnShields
 
             foreach (var thingDef in DefDatabase<ThingDef>.AllDefsListForReading)
             {
-                if (!IsShield(thingDef)) continue;
+                if (!IsShield(thingDef))
+                    continue;
                 var sum = 0f;
                 foreach (var pa in allShieldPairs)
                 {

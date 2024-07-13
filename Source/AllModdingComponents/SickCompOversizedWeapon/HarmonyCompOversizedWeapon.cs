@@ -15,9 +15,9 @@ namespace SickCompOversizedWeapon
             var type = typeof(HarmonyCompOversizedWeapon);
             //var CarnySenpaiEnableOversizedWeaponsModLoaded = ModsConfig.IsActive("CarnySenpai.EnableOversizedWeapons");
 
-           // if (CarnySenpaiEnableOversizedWeaponsModLoaded)
-           // {
-            //    Log.Message("SickTools: Using Carny Senpai's Enable Oversized Weapons instead of CompOversizedWeapon");
+            // if (CarnySenpaiEnableOversizedWeaponsModLoaded)
+            // {
+            //    Log.Message("SickTools:: Using Carny Senpai's Enable Oversized Weapons instead of CompOversizedWeapon");
             //    return;
             //}
             //Log.Warning("SickTools CompOversizedWeapon Loaded:: This component is no longer recommended for performance. Please see Carny Senpai's Enable Oversized Weapons mod. Once the Carny Senpai's mod is loaded, it will be used instead of CompOversizedWeapon");
@@ -28,9 +28,11 @@ namespace SickCompOversizedWeapon
                 postfix: new HarmonyMethod(type, nameof(get_DefaultGraphic_PostFix)));
         }
 
+
+
         /// <summary>
         ///     Adds another "layer" to the equipment aiming if they have a
-        ///     weapon with a CompActivatableEffect.  WAS FIRST PARAM:Pawn ___pawn, 
+        ///     weapon with a CompActivatableEffect.
         /// </summary>
         public static bool DrawEquipmentAimingPreFix(Thing eq, Vector3 drawLoc, float aimAngle)
         {
