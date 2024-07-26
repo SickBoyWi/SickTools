@@ -1,5 +1,4 @@
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\1.5\Assemblies\SickPawnShields.dll
-D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickPawnShields\obj\RW1.5\SickPawnShields.csprojAssemblyReference.cache
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickPawnShields\obj\RW1.5\SickPawnShields.AssemblyInfoInputs.cache
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickPawnShields\obj\RW1.5\SickPawnShields.AssemblyInfo.cs
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickPawnShields\obj\RW1.5\SickPawnShields.csproj.CoreCompileInputs.cache
