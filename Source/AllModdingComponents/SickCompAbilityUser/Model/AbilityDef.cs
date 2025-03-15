@@ -59,17 +59,17 @@ namespace SickAbilityUser
                 if (def.TargetAoEProperties != null)
                 {
                     var s = new StringBuilder();
-                    s.AppendLine(StringsToTranslate.AU_AoEProperties);
+                    s.AppendLine(StringsToTranslate.ST_AoEProperties);
                     if (def.TargetAoEProperties.targetClass == typeof(Pawn))
-                        s.AppendLine("\t" + StringsToTranslate.AU_TargetClass + StringsToTranslate.AU_TargetClass);
+                        s.AppendLine("\t" + StringsToTranslate.ST_TargetClass + StringsToTranslate.ST_TargetClass);
                     else
-                        s.AppendLine("\t" + StringsToTranslate.AU_TargetClass +
+                        s.AppendLine("\t" + StringsToTranslate.ST_TargetClass +
                                      def.TargetAoEProperties.targetClass.ToString().CapitalizeFirst());
                     s.AppendLine("\t" + "Range".Translate() + ": " + def.TargetAoEProperties.range);
-                    s.AppendLine("\t" + StringsToTranslate.AU_TargetClass + def.TargetAoEProperties.friendlyFire);
-                    s.AppendLine("\t" + StringsToTranslate.AU_AoEMaxTargets + def.TargetAoEProperties.maxTargets);
+                    s.AppendLine("\t" + StringsToTranslate.ST_TargetClass + def.TargetAoEProperties.friendlyFire);
+                    s.AppendLine("\t" + StringsToTranslate.ST_AoEMaxTargets + def.TargetAoEProperties.maxTargets);
                     if (def.TargetAoEProperties.startsFromCaster)
-                        s.AppendLine("\t" + StringsToTranslate.AU_AoEStartsFromCaster);
+                        s.AppendLine("\t" + StringsToTranslate.ST_AoEStartsFromCaster);
                     return s.ToString();
                 }
             return "";
@@ -81,14 +81,14 @@ namespace SickAbilityUser
             if (def != null)
             {
                 var s = new StringBuilder();
-                s.AppendLine(StringsToTranslate.AU_Cooldown + def.SecondsToRecharge.ToString("N0") + " " +
+                s.AppendLine(StringsToTranslate.ST_Cooldown + def.SecondsToRecharge.ToString("N0") + " " +
                              "SecondsLower".Translate());
-                s.AppendLine(StringsToTranslate.AU_Type + def.AbilityTargetCategory switch
+                s.AppendLine(StringsToTranslate.ST_Type + def.AbilityTargetCategory switch
                 {
-                    AbilityTargetCategory.TargetAoE => StringsToTranslate.AU_TargetAoE,
-                    AbilityTargetCategory.TargetSelf => StringsToTranslate.AU_TargetSelf,
-                    AbilityTargetCategory.TargetThing => StringsToTranslate.AU_TargetThing,
-                    AbilityTargetCategory.TargetLocation => StringsToTranslate.AU_TargetLocation,
+                    AbilityTargetCategory.TargetAoE => StringsToTranslate.ST_TargetAoE,
+                    AbilityTargetCategory.TargetSelf => StringsToTranslate.ST_TargetSelf,
+                    AbilityTargetCategory.TargetThing => StringsToTranslate.ST_TargetThing,
+                    AbilityTargetCategory.TargetLocation => StringsToTranslate.ST_TargetLocation,
                     _ => throw new NotImplementedException(),
                 });
                 if (def.tooltipShowProjectileDamage)
@@ -98,26 +98,26 @@ namespace SickAbilityUser
                             {
                                 s.AppendLine("Damage".Translate() + ": " +
                                              def.defaultProjectile.projectile.GetDamageAmount(1f));
-                                s.AppendLine("Damage".Translate() + " " + StringsToTranslate.AU_Type +
+                                s.AppendLine("Damage".Translate() + " " + StringsToTranslate.ST_Type +
                                              def.defaultProjectile.projectile.damageDef.LabelCap);
                             }
                 if (def.tooltipShowExtraDamages)
                     if (def.extraDamages != null)
                         if (def.extraDamages.Count == 1)
                         {
-                            s.AppendLine(StringsToTranslate.AU_Extra + " " + "Damage".Translate() + ": " +
+                            s.AppendLine(StringsToTranslate.ST_Extra + " " + "Damage".Translate() + ": " +
                                          def.extraDamages[0].damage);
-                            s.AppendLine(StringsToTranslate.AU_Extra + " " + "Damage".Translate() + " " +
-                                         StringsToTranslate.AU_Type + def.extraDamages[0].damageDef.LabelCap);
+                            s.AppendLine(StringsToTranslate.ST_Extra + " " + "Damage".Translate() + " " +
+                                         StringsToTranslate.ST_Type + def.extraDamages[0].damageDef.LabelCap);
                         }
                         else if (def.extraDamages.Count > 1)
                         {
-                            s.AppendLine(StringsToTranslate.AU_Extra + " " + "Damage".Translate() + ": ");
+                            s.AppendLine(StringsToTranslate.ST_Extra + " " + "Damage".Translate() + ": ");
                             foreach (var extraDam in def.extraDamages)
                             {
-                                s.AppendLine("\t" + StringsToTranslate.AU_Extra + " " + "Damage".Translate() + " " +
-                                             StringsToTranslate.AU_Type + extraDam.damageDef.LabelCap);
-                                s.AppendLine("\t" + StringsToTranslate.AU_Extra + " " + "Damage".Translate() + ": " +
+                                s.AppendLine("\t" + StringsToTranslate.ST_Extra + " " + "Damage".Translate() + " " +
+                                             StringsToTranslate.ST_Type + extraDam.damageDef.LabelCap);
+                                s.AppendLine("\t" + StringsToTranslate.ST_Extra + " " + "Damage".Translate() + ": " +
                                              extraDam.damage);
                             }
                         }
@@ -125,13 +125,13 @@ namespace SickAbilityUser
                     if (def.mentalStatesToApply != null)
                         if (def.mentalStatesToApply.Count == 1)
                         {
-                            s.AppendLine(StringsToTranslate.AU_MentalStateChance + ": " +
+                            s.AppendLine(StringsToTranslate.ST_MentalStateChance + ": " +
                                          def.mentalStatesToApply[0].mentalStateDef.LabelCap + " " +
                                          def.mentalStatesToApply[0].applyChance.ToStringPercent());
                         }
                         else if (def.mentalStatesToApply.Count > 1)
                         {
-                            s.AppendLine(StringsToTranslate.AU_MentalStateChance);
+                            s.AppendLine(StringsToTranslate.ST_MentalStateChance);
                             foreach (var mentalState in def.mentalStatesToApply)
                                 s.AppendLine("\t" + mentalState.mentalStateDef.LabelCap + " " +
                                              mentalState.applyChance.ToStringPercent());
@@ -141,12 +141,12 @@ namespace SickAbilityUser
                     if (def.hediffsToApply != null)
                         if (def.hediffsToApply.Count == 1)
                         {
-                            s.AppendLine(StringsToTranslate.AU_EffectChance + def.hediffsToApply[0].hediffDef.LabelCap +
+                            s.AppendLine(StringsToTranslate.ST_EffectChance + def.hediffsToApply[0].hediffDef.LabelCap +
                                          " " + def.hediffsToApply[0].applyChance.ToStringPercent());
                         }
                         else if (def.hediffsToApply.Count > 1)
                         {
-                            s.AppendLine(StringsToTranslate.AU_EffectChance);
+                            s.AppendLine(StringsToTranslate.ST_EffectChance);
                             foreach (var hediff in def.hediffsToApply)
                             {
                                 float duration = 0;
@@ -168,7 +168,7 @@ namespace SickAbilityUser
                             }
                         }
                     if (def.burstShotCount > 1)
-                        s.AppendLine(StringsToTranslate.AU_BurstShotCount + " " + def.burstShotCount);
+                        s.AppendLine(StringsToTranslate.ST_BurstShotCount + " " + def.burstShotCount);
                 }
 
                 return s.ToString();

@@ -121,7 +121,7 @@ namespace SickAbilityUser
             {
                 TipSignal tip = Desc;
                 if (disabled && !disabledReason.NullOrEmpty())
-                    tip.text += "\n" + StringsToTranslate.AU_DISABLED + ": " + disabledReason;
+                    tip.text += "\n" + StringsToTranslate.ST_DISABLED + ": " + disabledReason;
                 TooltipHandler.TipRegion(butRect, tip);
             }
             if (pawnAbility.CooldownTicksLeft != -1 && pawnAbility.CooldownTicksLeft < pawnAbility.MaxCastingTicks)

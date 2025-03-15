@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+	<ST_NoTargets>No targets available.</ST_NoTargets>
 
+	<ST_DISABLED>DISABLED</ST_DISABLED>
+
+	<ST_Type>Type:</ST_Type>
+	<ST_TargetAoE>Area of Effect</ST_TargetAoE>
+	<ST_TargetSelf>Targets Self</ST_TargetSelf>
+	<ST_TargetThing>Targets Other</ST_TargetThing>
+	<ST_TargetLocation>Targets Location</ST_TargetLocation>
+	<ST_Cooldown>Cooldown:</ST_Cooldown>
+	<ST_Extra>Extra</ST_Extra>
+	<ST_MentalStateChance>Mental State Chance</ST_MentalStateChance>
+	<ST_EffectChance>Effect Chance</ST_EffectChance>
+	<ST_PawnAbilityRecharging>{0} needs time to recharge</ST_PawnAbilityRecharging>
+
+	<ST_AoEProperties>Area of Effect Properties</ST_AoEProperties>
+	<ST_TargetClass>Targets:</ST_TargetClass>
+	<ST_AoECharacters>Characters</ST_AoECharacters>
+	<ST_AoEFriendlyFire>Friendly Fire:</ST_AoEFriendlyFire>
+	<ST_AoEMaxTargets>Max Targets:</ST_AoEMaxTargets>
+	<ST_AoEStartsFromCaster>Starts from caster:</ST_AoEStartsFromCaster>
 
 </LanguageData>

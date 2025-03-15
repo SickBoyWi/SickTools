@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef>
+		<defName>ST_DelayedEffecterSpawnerNonPawn</defName>
+		<label>delayed effecter spawner</label> <!-- hidden -->
+		<thingClass>SickTools.DelayedEffecterSpawnerNonPawn</thingClass>
+		<tickerType>Normal</tickerType>
+		<useHitPoints>false</useHitPoints>
+		<hideInspect>true</hideInspect>
+		<drawerType>None</drawerType>
+	</ThingDef>
+
+</Defs>

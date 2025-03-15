@@ -291,7 +291,7 @@ namespace SickAbilityUser
             }
             if (CooldownTicksLeft > 0)
             {
-                reason = "AU_PawnAbilityRecharging".Translate(casterPawn.LabelShort);
+                reason = "ST_PawnAbilityRecharging".Translate(casterPawn.LabelShort);
                 return false;
             }
             //else if (!casterPawn.drafter.Drafted)

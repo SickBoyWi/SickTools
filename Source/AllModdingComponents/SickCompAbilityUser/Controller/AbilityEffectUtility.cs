@@ -107,11 +107,11 @@ static internal class AbilityEffectUtility
                 {
                     victim.Drawer.Notify_DebugAffected();
                     MoteMaker.ThrowText(victim.DrawPos, victim.Map,
-                        hediffs.hediffDef.LabelCap + ": " + StringsToTranslate.AU_CastSuccess);
+                        hediffs.hediffDef.LabelCap + ": " + StringsToTranslate.ST_CastSuccess);
                 }
                 else
                 {
-                    MoteMaker.ThrowText(victim.DrawPos, victim.Map, StringsToTranslate.AU_CastFailure);
+                    MoteMaker.ThrowText(victim.DrawPos, victim.Map, StringsToTranslate.ST_CastFailure);
                 }
             }
     }
@@ -149,12 +149,12 @@ static internal class AbilityEffectUtility
                 {
                     victim.Drawer.Notify_DebugAffected();
                     MoteMaker.ThrowText(victim.DrawPos, victim.Map,
-                        mentalStateGiver.mentalStateDef.LabelCap + ": " + StringsToTranslate.AU_CastSuccess);
+                        mentalStateGiver.mentalStateDef.LabelCap + ": " + StringsToTranslate.ST_CastSuccess);
                 }
                 else
                 {
                     MoteMaker.ThrowText(victim.DrawPos, victim.Map,
-                        mentalStateGiver.mentalStateDef.LabelCap + ": " + StringsToTranslate.AU_CastFailure);
+                        mentalStateGiver.mentalStateDef.LabelCap + ": " + StringsToTranslate.ST_CastFailure);
                 }
             }
     }

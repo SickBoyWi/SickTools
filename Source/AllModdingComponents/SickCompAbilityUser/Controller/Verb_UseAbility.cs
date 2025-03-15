@@ -146,7 +146,7 @@ namespace SickAbilityUser
                 {
                     if (!TryFindShootLineFromTo(casterPawn.Position, castTarg, out var resultingLine))
                     {
-                        Messages.Message("AU_NoLineOfSight".Translate(), MessageTypeDefOf.RejectInput);
+                        Messages.Message("ST_NoLineOfSight".Translate(), MessageTypeDefOf.RejectInput);
                         return false;
                     }
                     casterPawn.Drawer.Notify_WarmingCastAlongLine(resultingLine, casterPawn.Position);
@@ -199,7 +199,7 @@ namespace SickAbilityUser
                 TargetsAoE.RemoveRange(0, TargetsAoE.Count - 1);
             if (props.mustHaveTarget && TargetsAoE.Count == 0)
             {
-                Messages.Message("AU_NoTargets".Translate(), MessageTypeDefOf.RejectInput);
+                Messages.Message("ST_NoTargets".Translate(), MessageTypeDefOf.RejectInput);
                 Ability.Notify_AbilityFailed(refund: true);
                 return false;
             }
@@ -251,7 +251,7 @@ namespace SickAbilityUser
             var flag = TryFindShootLineFromTo(caster.Position, launchTarget, out var shootLine);
             if (verbProps.requireLineOfSight && verbProps.stopBurstWithoutLos && !flag)
             {
-                Messages.Message("AU_NoLineOfSight".Translate(), MessageTypeDefOf.RejectInput);
+                Messages.Message("ST_NoLineOfSight".Translate(), MessageTypeDefOf.RejectInput);
                 return false;
             }
             var drawPos = caster.DrawPos;
