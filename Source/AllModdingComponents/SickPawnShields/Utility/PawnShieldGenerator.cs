@@ -33,8 +33,10 @@ namespace SickPawnShields
 
             // Same conditions as weapon generation, except using PawnKindDef ShieldPawnGeneratorProperties.shieldTags instead of pawn.kindDef.weaponTags
             var generatorProps = request.KindDef.GetShieldPawnGeneratorProperties();
-            if (generatorProps == null || generatorProps.shieldTags.NullOrEmpty())
+
+            if (generatorProps is null || generatorProps.shieldTags.NullOrEmpty() || Rand.Value > generatorProps.shieldChance)
                 return;
+
             if (!pawn.RaceProps.ToolUser ||
                 !pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation) ||
                 pawn.WorkTagIsDisabled(WorkTags.Violent))

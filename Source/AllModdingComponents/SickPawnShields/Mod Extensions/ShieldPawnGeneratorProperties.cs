@@ -9,7 +9,7 @@ namespace SickPawnShields
     public class ShieldPawnGeneratorProperties : DefModExtension
     {
         /// <summary>
-        /// How much "money" the pawn got pay for their shield.
+        /// How much "money" the pawn has for their shield.
         /// </summary>
         public FloatRange shieldMoney = FloatRange.Zero;
 
@@ -17,6 +17,11 @@ namespace SickPawnShields
         /// The shields with any of these tags can be used.
         /// </summary>
         public List<string> shieldTags;
+
+        /// <summary>
+        /// The chance that a pawn will have a shield.
+        /// </summary>
+        public float shieldChance = 0.0f;
 
         public override IEnumerable<string> ConfigErrors()
         {
