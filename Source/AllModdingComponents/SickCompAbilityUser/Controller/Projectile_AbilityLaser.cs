@@ -72,7 +72,7 @@ namespace SickAbilityUser
         /// <summary>
         ///     Main projectile sequence.
         /// </summary>
-        public override void Tick()
+        protected override void Tick()
         {
             //  //Log.Message("Tickng Ma Lazor");
             // Directly call the Projectile base Tick function (we want to completely override the Projectile Tick() function).
@@ -255,9 +255,9 @@ namespace SickAbilityUser
             {
                 //Log.Message("Hit thing found: " + hitThing.ToString() );
 
-                var damageAmountBase = def.projectile.GetDamageAmount(1f);
+                var damageAmountBase = def.projectile.GetDamageAmount(1f, null);
                 var dinfo = new DamageInfo(def.projectile.damageDef, damageAmountBase,
-                    def.projectile.GetArmorPenetration(1f), ExactRotation.eulerAngles.y,
+                    def.projectile.GetArmorPenetration(null, null), ExactRotation.eulerAngles.y,
                     launcher, weapon: equipmentDef, intendedTarget: hitThing);
                 var battleLogEntry_RangedImpact = new BattleLogEntry_RangedImpact(launcher, hitThing, intendedTarget.Thing, launcher.def, def, targetCoverDef);
                 Find.BattleLog.Add(battleLogEntry_RangedImpact);

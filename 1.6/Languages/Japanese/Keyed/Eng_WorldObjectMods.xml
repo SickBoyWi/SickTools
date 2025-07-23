@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <SickTools_WorldObjectConst_AbandonReason>この場所にキャラバン隊がありません</SickTools_WorldObjectConst_AbandonReason>
+  <SickTools_WorldObjectConst_ResourcesNeeded>必要な資源：{0}</SickTools_WorldObjectConst_ResourcesNeeded>
+  <SickTools_WorldObjectConst_NotEnoughThings>特定のアイテムが足りません。{2}が{1}が必要ですが、{0}しかありません</SickTools_WorldObjectConst_NotEnoughThings>
+  <SickTools_WorldObjectConst_NotEnoughStuff>{2}が不足しています。{1}が{1}が必要ですが、{0}しかありません</SickTools_WorldObjectConst_NotEnoughStuff>
+  <SickTools_WorldObjectConst_NotEnoughResources>資源不足のために、{0}の建設に失敗しました</SickTools_WorldObjectConst_NotEnoughResources>
+
+</LanguageData>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ST_DISABLED>DISABLED</ST_DISABLED>
+
+<ST_Type>Type: </ST_Type>
+<ST_TargetAoE>Zone d'effet</ST_TargetAoE>
+<ST_TargetSelf>Cibler (moi)</ST_TargetSelf>
+<ST_TargetThing>Cibler (autres)</ST_TargetThing>
+<ST_TargetLocation>Emplacement de la cible</ST_TargetLocation>
+<ST_Cooldown>Recharge: </ST_Cooldown>
+<ST_Extra>Extra</ST_Extra>
+<ST_MentalStateChance>probabilité d'état mental</ST_MentalStateChance>
+<ST_EffectChance>probabilité d'effet</ST_EffectChance>
+<ST_PawnAbilityRecharging>{0} a besoin de temps pour recharger</ST_PawnAbilityRecharging>
+
+
+<ST_AoEProperties>Propriétés de la zone d'effet</ST_AoEProperties>
+<ST_TargetClass>Cibles: </ST_TargetClass>
+<ST_AoECharacters>Personnages</ST_AoECharacters>
+<ST_AoEFriendlyFire>Tir amie: </ST_AoEFriendlyFire>
+<ST_AoEMaxTargets>Nombre de cibles maximal: </ST_AoEMaxTargets>
+<ST_AoEStartsFromCaster>Se déclenche a partir du sorcier: </ST_AoEStartsFromCaster>
+	
+</LanguageData>

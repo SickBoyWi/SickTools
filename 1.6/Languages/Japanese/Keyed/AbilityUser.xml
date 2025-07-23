@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ST_NoTargets>指定可能な目標がありません。</ST_NoTargets>
+
+  <ST_DISABLED>機能停止</ST_DISABLED>
+
+  <ST_Type>タイプ：</ST_Type>
+  <ST_TargetAoE>目標(範囲)</ST_TargetAoE>
+  <ST_TargetSelf>目標(自分)</ST_TargetSelf>
+  <ST_TargetThing>目標(他者)</ST_TargetThing>
+  <ST_TargetLocation>目標(場所)</ST_TargetLocation>
+  <ST_Cooldown>クールダウン：</ST_Cooldown>
+  <ST_Extra>特殊</ST_Extra>
+  <ST_MentalStateChance>精神状態変化率</ST_MentalStateChance>
+  <ST_EffectChance>影響確率</ST_EffectChance>
+  <ST_PawnAbilityRecharging>{0}は回復する時間が必要</ST_PawnAbilityRecharging>
+
+
+  <ST_AoEProperties>影響範囲の詳細</ST_AoEProperties>
+  <ST_TargetClass>目標：</ST_TargetClass>
+  <ST_AoECharacters>キャラクター</ST_AoECharacters>
+  <ST_AoEFriendlyFire>味方への誤射：</ST_AoEFriendlyFire>
+  <ST_AoEMaxTargets>最大目標数：</ST_AoEMaxTargets>
+  <ST_AoEStartsFromCaster>使用者から開始：</ST_AoEStartsFromCaster>
+
+</LanguageData>

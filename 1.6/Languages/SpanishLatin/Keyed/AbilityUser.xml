@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ST_DISABLED>DESABILITADO</ST_DISABLED>
+
+  <ST_Type>Tipo: </ST_Type>
+  <ST_TargetAoE>Área de efecto</ST_TargetAoE>
+  <ST_TargetSelf>Dirige así mismo</ST_TargetSelf>
+  <ST_TargetThing>Dirige a Otros</ST_TargetThing>
+  <ST_TargetLocation>Locación a donde se dirige</ST_TargetLocation>
+  <ST_Cooldown>Enfriamiento: </ST_Cooldown>
+  <ST_Extra>Extra</ST_Extra>
+  <ST_MentalStateChance>Chance del Estado Mental</ST_MentalStateChance>
+  <ST_EffectChance>Chance de efecto</ST_EffectChance>
+  <ST_PawnAbilityRecharging>{0} Necesita tiempo para recargar</ST_PawnAbilityRecharging>
+
+
+  <ST_AoEProperties>Propiedades del Área de Efecto</ST_AoEProperties>
+  <ST_TargetClass>Objetivo: </ST_TargetClass>
+  <ST_AoECharacters>Personajes</ST_AoECharacters>
+  <ST_AoEFriendlyFire>Fuego Amigo: </ST_AoEFriendlyFire>
+  <ST_AoEMaxTargets>Objetivos Máximos: </ST_AoEMaxTargets>
+  <ST_AoEStartsFromCaster>Comienza desde el emisor: </ST_AoEStartsFromCaster>
+
+</LanguageData>

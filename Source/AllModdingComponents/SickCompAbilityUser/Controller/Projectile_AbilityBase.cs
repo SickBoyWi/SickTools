@@ -29,7 +29,7 @@ namespace SickAbilityUser
         }
 
         // Verse.Projectile
-        public override void Tick()
+        protected override void Tick()
         {
             //Log.Message($"Projectile_AbilityBase.Tick({this})");
             if (landed)
@@ -159,7 +159,7 @@ namespace SickAbilityUser
                     foreach (var damage in extraDamages)
                     {
                         var extraDinfo = new DamageInfo(damage.damageDef, damage.damage,
-                            def.projectile.GetArmorPenetration(1f), ExactRotation.eulerAngles.y,
+                            def.projectile.GetArmorPenetration(null, null), ExactRotation.eulerAngles.y,
                             launcher, weapon: equipmentDef);
                         //Log.Message($"Projectile_AbilityBase.Impact({this}, {hitThing}) extraDinfo={extraDinfo}");
                         hitThing.TakeDamage(extraDinfo);

@@ -1,3 +1,4 @@
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\1.6\Assemblies\SickAbilityUserAI.dll
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\1.5\Assemblies\SickAbilityUserAI.dll
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickAbilityUserAI\obj\RW1.5\SickAbilityUserAI.csprojAssemblyReference.cache
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickAbilityUserAI\obj\RW1.5\SickAbilityUserAI.AssemblyInfoInputs.cache

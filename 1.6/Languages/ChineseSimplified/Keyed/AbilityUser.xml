@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ST_DISABLED>禁用</ST_DISABLED>
+
+  <ST_Type>类型：</ST_Type>
+  <ST_TargetAoE>有效范围</ST_TargetAoE>
+  <ST_TargetSelf>以自己为目标</ST_TargetSelf>
+  <ST_TargetThing>以其他为目标</ST_TargetThing>
+  <ST_TargetLocation>目标位置</ST_TargetLocation>
+  <ST_Cooldown>冷却：</ST_Cooldown>
+  <ST_Extra>附加</ST_Extra>
+  <ST_MentalStateChance>精神影响几率</ST_MentalStateChance>
+  <ST_EffectChance>影响几率</ST_EffectChance>
+  <ST_PawnAbilityRecharging>{0}需要时间恢复能量</ST_PawnAbilityRecharging>
+
+
+  <ST_AoEProperties>有效范围属性</ST_AoEProperties>
+  <ST_TargetClass>目标：</ST_TargetClass>
+  <ST_AoECharacters>角色</ST_AoECharacters>
+  <ST_AoEFriendlyFire>误伤：</ST_AoEFriendlyFire>
+  <ST_AoEMaxTargets>最大目标数：</ST_AoEMaxTargets>
+  <ST_AoEStartsFromCaster>从施法者开始：</ST_AoEStartsFromCaster>
+
+</LanguageData>

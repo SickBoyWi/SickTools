@@ -94,10 +94,10 @@ namespace SickAbilityUser
                 if (def.tooltipShowProjectileDamage)
                     if (def.defaultProjectile != null)
                         if (def.defaultProjectile.projectile != null)
-                            if (def.defaultProjectile.projectile.GetDamageAmount(1f) > 0)
+                            if (def.defaultProjectile.projectile.GetDamageAmount(1f, null) > 0)
                             {
                                 s.AppendLine("Damage".Translate() + ": " +
-                                             def.defaultProjectile.projectile.GetDamageAmount(1f));
+                                             def.defaultProjectile.projectile.GetDamageAmount(1f, null));
                                 s.AppendLine("Damage".Translate() + " " + StringsToTranslate.ST_Type +
                                              def.defaultProjectile.projectile.damageDef.LabelCap);
                             }

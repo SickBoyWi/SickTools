@@ -26,7 +26,7 @@ namespace SickTools
             this.spawnPreEffectTick = this.spawnTick - this.preEmergeEffecter.maintainTicks;
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             if (!this.Spawned)
                 return;

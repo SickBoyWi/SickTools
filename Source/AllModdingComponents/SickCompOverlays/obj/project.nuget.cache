@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Rz6iWTtAo195czA5uYGTmxxMzdDf3Tnzo0kej2Bh09o60FOohgXse1lsK57lmAF592Sw9FFPHiyNobsTA5xvEQ==",
+  "dgSpecHash": "ZoyWK3R3Kdar9fI0W3AFRTA+khlSaChc9t6MiZf0P/rnSpYHHgbiv85/o+F3+CZfHo+9qmDDf1pCtGByYoZMbw==",
   "success": true,
   "projectFilePath": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\SickTools\\Source\\AllModdingComponents\\SickCompOverlays\\SickCompOverlays.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\johnn\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4104\\krafs.rimworld.ref.1.5.4104.nupkg.sha512",
+    "C:\\Users\\johnn\\.nuget\\packages\\krafs.rimworld.ref\\1.6.4528\\krafs.rimworld.ref.1.6.4528.nupkg.sha512",
     "C:\\Users\\johnn\\.nuget\\packages\\lib.harmony\\2.3.1.1\\lib.harmony.2.3.1.1.nupkg.sha512"
   ],
   "logs": []

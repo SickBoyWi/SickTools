@@ -155,7 +155,7 @@ namespace SickAbilityUser
             };
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             //if (ticksToImpact % 10 == 0) Log.Message($"FlyingObject.Tick({this})");
             base.Tick();
@@ -254,14 +254,18 @@ namespace SickAbilityUser
                     effecter.Trigger(target, target);
                     effecter.Cleanup();
                 }
+
+                float? postExplosionGasRadiusOverride = new float?();
+                int postExplosionGasAmount = new int();
+
                 GenExplosion.DoExplosion(
                     center: pos,
                     map,
                     props.explosionRadius,
                     props.damageDef,
                     instigator: this,
-                    props.GetDamageAmount(1f),
-                    props.GetArmorPenetration(1f),
+                    props.GetDamageAmount(1f, null),
+                    props.GetArmorPenetration(null, null),
                     props.soundExplode,
                     weapon: null,
                     projectile: null,
@@ -270,6 +274,8 @@ namespace SickAbilityUser
                     props.postExplosionSpawnChance,
                     props.postExplosionSpawnThingCount,
                     props.postExplosionGasType,
+                    postExplosionGasRadiusOverride,
+                    postExplosionGasAmount,
                     props.applyDamageToExplosionCellsNeighbors,
                     props.preExplosionSpawnThingDef,
                     props.preExplosionSpawnChance,

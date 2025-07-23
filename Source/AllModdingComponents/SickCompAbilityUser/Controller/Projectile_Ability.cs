@@ -44,8 +44,8 @@ namespace SickAbilityUser
             base.Impact_Override(hitThing);
             if (hitThing != null)
             {
-                var dinfo = new DamageInfo(def.projectile.damageDef, def.projectile.GetDamageAmount(1f),
-                    def.projectile.GetArmorPenetration(1f), ExactRotation.eulerAngles.y,
+                var dinfo = new DamageInfo(def.projectile.damageDef, def.projectile.GetDamageAmount(1f, null),
+                    def.projectile.GetArmorPenetration(null, null), ExactRotation.eulerAngles.y,
                     launcher, weapon: equipmentDef);
                 //Log.Message($"Projectile_Ability.Impact_Override({this}, {hitThing}) dinfo={dinfo}");
                 hitThing.TakeDamage(dinfo);

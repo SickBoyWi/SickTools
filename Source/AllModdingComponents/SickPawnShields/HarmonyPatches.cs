@@ -38,21 +38,47 @@ namespace SickPawnShields
             harmony.Patch(AccessTools.Method(typeof(Pawn_HealthTracker), nameof(Pawn_HealthTracker.PreApplyDamage)),
                 prefix: new HarmonyMethod(type, nameof(Patch_Pawn_HealthTracker_PreApplyDamage)));
 
-            harmony.Patch(AccessTools.Method(typeof(Pawn_EquipmentTracker), nameof(Pawn_EquipmentTracker.MakeRoomFor)),
-                postfix: new HarmonyMethod(type, nameof(Patch_Pawn_EquipmentTracker_MakeRoomFor)));
-
             harmony.Patch(AccessTools.Method(typeof(StatWorker), nameof(StatWorker.GetValueUnfinalized)),
                 transpiler: new HarmonyMethod(type, nameof(Transpiler_StatWorker_GetValueUnfinalized)));
             harmony.Patch(AccessTools.Method(typeof(StatWorker), nameof(StatWorker.GetExplanationUnfinalized)),
                 transpiler: new HarmonyMethod(type, nameof(Transpiler_StatWorker_GetExplanationUnfinalized)));
+
+            harmony.Patch(
+                AccessTools.Method(
+                    typeof(Pawn_EquipmentTracker),
+                    nameof(Pawn_EquipmentTracker.MakeRoomFor),
+                    new Type[] { typeof(ThingWithComps) }
+                ),
+                postfix: new HarmonyMethod(type, nameof(Patch_Pawn_EquipmentTracker_MakeRoomFor))
+            );
+
+        }
+
+        public static void Patch_Pawn_EquipmentTracker_MakeRoomFor(Pawn_EquipmentTracker __instance, Pawn ___pawn, ThingWithComps eq)
+        {
+            var shieldComp = eq.GetCompShield();
+            if (shieldComp != null)
+            {
+                //Unequip any existing shield.
+                var shield = __instance.GetShield();
+                if (shield != null)
+                {
+                    if (__instance.TryDropEquipment(shield, out var thingWithComps, ___pawn.Position, true))
+                    {
+                        thingWithComps?.SetForbidden(false, true);
+                    }
+                    else
+                    {
+                        Log.Error(___pawn + " couldn't make room for shield " + eq);
+                    }
+                }
+            }
         }
 
         public static void Patch_PawnGenerator_GenerateGearFor(Pawn pawn, ref PawnGenerationRequest request)
         {
             PawnShieldGenerator.TryGenerateShieldFor(pawn, request);
         }
-
-
 
         private static readonly FieldInfo pawnEquipmentField = AccessTools.Field(typeof(Pawn), nameof(Pawn.equipment));
         private static readonly FieldInfo statWorkerStatField = AccessTools.Field(typeof(StatWorker), "stat");
@@ -62,7 +88,6 @@ namespace SickPawnShields
         private static readonly Func<Thing, StatDef, string> InfoTextLineFromGear =
             (Func<Thing, StatDef, string>)AccessTools.Method(typeof(StatWorker), "InfoTextLineFromGear")
                 .CreateDelegate(typeof(Func<Thing, StatDef, string>));
-
 
         public static IEnumerable<CodeInstruction> Transpiler_StatWorker_GetValueUnfinalized(IEnumerable<CodeInstruction> instructions,
             MethodBase method, ILGenerator ilGen)
@@ -192,27 +217,6 @@ namespace SickPawnShields
                 bodyVector += shieldComp.ShieldProps.renderProperties.OffsetFromRotation(___pawn.Rotation);
 
                 shieldComp.RenderShield(bodyVector, ___pawn.Rotation, ___pawn, shield);
-            }
-        }
-
-        public static void Patch_Pawn_EquipmentTracker_MakeRoomFor(Pawn_EquipmentTracker __instance, Pawn ___pawn, ThingWithComps eq)
-        {
-            var shieldComp = eq.GetCompShield();
-            if (shieldComp != null)
-            {
-                //Unequip any existing shield.
-                var shield = __instance.GetShield();
-                if (shield != null)
-                {
-                    if (__instance.TryDropEquipment(shield, out var thingWithComps, ___pawn.Position, true))
-                    {
-                        thingWithComps?.SetForbidden(false, true);
-                    }
-                    else
-                    {
-                        Log.Error(___pawn + " couldn't make room for shield " + eq);
-                    }
-                }
             }
         }
 

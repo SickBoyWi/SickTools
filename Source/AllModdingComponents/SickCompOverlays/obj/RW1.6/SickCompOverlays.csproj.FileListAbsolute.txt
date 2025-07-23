@@ -1,0 +1,5 @@
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\1.6\Assemblies\SickCompOverlays.dll
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompOverlays\obj\RW1.6\SickCompOverlays.AssemblyInfoInputs.cache
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompOverlays\obj\RW1.6\SickCompOverlays.AssemblyInfo.cs
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompOverlays\obj\RW1.6\SickCompOverlays.csproj.CoreCompileInputs.cache
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompOverlays\obj\RW1.6\SickCompOverlays.dll

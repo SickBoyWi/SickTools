@@ -14,8 +14,8 @@ static internal class AbilityEffectUtility
         if (spawnables.factionDef != null)
             factionDefToAssign = spawnables.factionDef;
         if (spawnables.kindDef != null)
-            if (spawnables.kindDef.defaultFactionType != null)
-                factionDefToAssign = spawnables.kindDef.defaultFactionType;
+            if (spawnables.kindDef.defaultFactionDef != null)
+                factionDefToAssign = spawnables.kindDef.defaultFactionDef;
 
         return FactionUtility.DefaultFactionFrom(factionDefToAssign);
     }

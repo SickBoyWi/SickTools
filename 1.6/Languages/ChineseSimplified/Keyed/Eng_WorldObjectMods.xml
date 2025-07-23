@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <SickTools_WorldObjectConst_AbandonReason>该位置没有可交易的商队</SickTools_WorldObjectConst_AbandonReason>
+  <SickTools_WorldObjectConst_ResourcesNeeded>资源：{0}</SickTools_WorldObjectConst_ResourcesNeeded>
+  <SickTools_WorldObjectConst_NotEnoughStuff>失败。需要材料{0}：{1} 。</SickTools_WorldObjectConst_NotEnoughStuff>
+
+</LanguageData>

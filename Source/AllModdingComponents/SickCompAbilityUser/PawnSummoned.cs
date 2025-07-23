@@ -34,7 +34,7 @@ namespace SickAbilityUser
         {
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             if (setup == false && Find.TickManager.TicksGame % 10 == 0)
