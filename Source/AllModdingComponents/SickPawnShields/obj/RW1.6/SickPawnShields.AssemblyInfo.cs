@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SickPawnShields")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("RW1.6")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.6.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.6.0.0\r\n+423473db102ef4ee84998a693381ca9f75c4b05a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.6.0.0\r\n+7b9a7fb540f782b580a492876c60ff93efe23f04")]
 [assembly: System.Reflection.AssemblyProductAttribute("SickPawnShields")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SickPawnShields")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.6.0.0")]

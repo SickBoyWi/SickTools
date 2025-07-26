@@ -41,39 +41,61 @@ namespace SickPawnShields
             harmony.Patch(AccessTools.Method(typeof(StatWorker), nameof(StatWorker.GetValueUnfinalized)),
                 transpiler: new HarmonyMethod(type, nameof(Transpiler_StatWorker_GetValueUnfinalized)));
             harmony.Patch(AccessTools.Method(typeof(StatWorker), nameof(StatWorker.GetExplanationUnfinalized)),
-                transpiler: new HarmonyMethod(type, nameof(Transpiler_StatWorker_GetExplanationUnfinalized)));
+                postfix: new HarmonyMethod(type, nameof(Postfix_GetExplanationUnfinalized)));
 
-            //harmony.Patch(
-            //    AccessTools.Method(
-            //        typeof(Pawn_EquipmentTracker),
-            //        nameof(Pawn_EquipmentTracker.MakeRoomFor),
-            //        new Type[] { typeof(ThingWithComps) } //, typeof(ThingWithComps).MakeByRefType()
-            //    ),
-            //    postfix: new HarmonyMethod(type, nameof(Patch_Pawn_EquipmentTracker_MakeRoomFor))
-            //);
+            //harmony.Patch(AccessTools.Method(typeof(StatWorker), nameof(StatWorker.GetExplanationUnfinalized)),
+            //    transpiler: new HarmonyMethod(type, nameof(Transpiler_StatWorker_GetExplanationUnfinalized)));
+
+            harmony.Patch(
+                AccessTools.Method(
+                    typeof(Pawn_EquipmentTracker),
+                    nameof(Pawn_EquipmentTracker.MakeRoomFor),
+                    new Type[] { typeof(ThingWithComps) } //, typeof(ThingWithComps).MakeByRefType()
+                ),
+                postfix: new HarmonyMethod(type, nameof(Patch_Pawn_EquipmentTracker_MakeRoomFor))
+            );
 
         }
 
-        //public static void Patch_Pawn_EquipmentTracker_MakeRoomFor(Pawn_EquipmentTracker __instance, Pawn ___pawn, ThingWithComps eq)
-        //{
-        //    var shieldComp = eq.GetCompShield();
-        //    if (shieldComp != null)
-        //    {
-        //        //Unequip any existing shield.
-        //        var shield = __instance.GetShield();
-        //        if (shield != null)
-        //        {
-        //            if (__instance.TryDropEquipment(shield, out var thingWithComps, ___pawn.Position, true))
-        //            {
-        //                thingWithComps?.SetForbidden(false, true);
-        //            }
-        //            else
-        //            {
-        //                Log.Error(___pawn + " couldn't make room for shield " + eq);
-        //            }
-        //        }
-        //    }
-        //}
+        public static void Patch_Pawn_EquipmentTracker_MakeRoomFor(Pawn_EquipmentTracker __instance, Pawn ___pawn, ThingWithComps eq)
+        {
+            var shieldComp = eq.GetCompShield();
+            if (shieldComp != null)
+            {
+                //Unequip any existing shield.
+                var shield = __instance.GetShield();
+                if (shield != null)
+                {
+                    if (__instance.TryDropEquipment(shield, out var thingWithComps, ___pawn.Position, true))
+                    {
+                        thingWithComps?.SetForbidden(false, true);
+                    }
+                    else
+                    {
+                        Log.Error(___pawn + " couldn't make room for shield " + eq);
+                    }
+                }
+            }
+        }
+
+        public static void Postfix_GetExplanationUnfinalized(
+            StatWorker __instance,
+            StatRequest req,
+            ToStringNumberSense numberSense,
+            ref string __result)
+        {
+            if (req.Thing is Pawn pawn && pawn.equipment is Pawn_EquipmentTracker equipment)
+            {
+                var shield = equipment.GetShield();
+                var stat = (StatDef)statWorkerStatField.GetValue(__instance); // Use reflection to get the stat
+                if (shield != null && GearAffectsStats(shield.def, stat))
+                {
+                    var sb = new StringBuilder(__result);
+                    sb.AppendLine(InfoTextLineFromGear(shield, stat));
+                    __result = sb.ToString();
+                }
+            }
+        }
 
         public static void Patch_PawnGenerator_GenerateGearFor(Pawn pawn, ref PawnGenerationRequest request)
         {
@@ -146,57 +168,57 @@ namespace SickPawnShields
             }
         }
 
-        public static IEnumerable<CodeInstruction> Transpiler_StatWorker_GetExplanationUnfinalized(IEnumerable<CodeInstruction> instructions,
-            MethodBase method, ILGenerator ilGen)
-        {
-            // Transforms following:
-            //  if (pawn.equipment != null && pawn.equipment.Primary != null && GearAffectsStat(pawn.equipment.Primary.def, stat))
-            //  {
-            //      stringBuilder.AppendLine(InfoTextLineFromGear(pawn.equipment.Primary, stat));
-            //  }
-            // into:
-            //  if (pawn.equipment != null)
-            //  {
-            //      if (pawn.equipment.Primary != null && GearAffectsStat(pawn.equipment.Primary.def, stat))
-            //          stringBuilder.AppendLine(InfoTextLineFromGear(pawn.equipment.Primary, stat));
-            //      StatWorkerInjection_BuildShieldString(stringBuilder, pawn.equipment, stat);
-            //  }
+        //public static IEnumerable<CodeInstruction> Transpiler_StatWorker_GetExplanationUnfinalized(IEnumerable<CodeInstruction> instructions,
+        //    MethodBase method, ILGenerator ilGen)
+        //{
+        //    // Transforms following:
+        //    //  if (pawn.equipment != null && pawn.equipment.Primary != null && GearAffectsStat(pawn.equipment.Primary.def, stat))
+        //    //  {
+        //    //      stringBuilder.AppendLine(InfoTextLineFromGear(pawn.equipment.Primary, stat));
+        //    //  }
+        //    // into:
+        //    //  if (pawn.equipment != null)
+        //    //  {
+        //    //      if (pawn.equipment.Primary != null && GearAffectsStat(pawn.equipment.Primary.def, stat))
+        //    //          stringBuilder.AppendLine(InfoTextLineFromGear(pawn.equipment.Primary, stat));
+        //    //      StatWorkerInjection_BuildShieldString(stringBuilder, pawn.equipment, stat);
+        //    //  }
 
-            var instructionList = instructions.AsList();
-            var locals = new Locals(method, ilGen);
-            var pawnEquipmentIndex = instructionList.FindSequenceIndex(
-                instruction => locals.IsLdloc(instruction),
-                instruction => instruction.LoadsField(pawnEquipmentField),
-                instruction => !instruction.IsBrfalse());
+        //    var instructionList = instructions.AsList();
+        //    var locals = new Locals(method, ilGen);
+        //    var pawnEquipmentIndex = instructionList.FindSequenceIndex(
+        //        instruction => locals.IsLdloc(instruction),
+        //        instruction => instruction.LoadsField(pawnEquipmentField),
+        //        instruction => !instruction.IsBrfalse());
 
-            var targetLabel = (Label)instructionList[pawnEquipmentIndex + 3].operand;
-
-
-            var stringBuilderIndex = instructionList.FindIndex(pawnEquipmentIndex + 3,
-                instruction => locals.IsLdloc(instruction, out var local) && local.LocalType == typeof(StringBuilder));
-
-            var insertionIndex = instructionList.FindIndex(pawnEquipmentIndex + 3,
-                instruction => instruction.labels.Contains(targetLabel));
+        //    var targetLabel = (Label)instructionList[pawnEquipmentIndex + 3].operand;
 
 
-            var labelsToTransfer = instructionList.GetRange(pawnEquipmentIndex + 3, insertionIndex - (pawnEquipmentIndex + 3))
-                .Where(instruction => instruction.operand is Label)
-                .Select(instruction => (Label)instruction.operand);
+        //    var stringBuilderIndex = instructionList.FindIndex(pawnEquipmentIndex + 3,
+        //        instruction => locals.IsLdloc(instruction, out var local) && local.LocalType == typeof(StringBuilder));
 
-            instructionList.SafeInsertRange(insertionIndex, new[]
-            {
-                instructionList[stringBuilderIndex].Clone(), // stringBuilder
-                instructionList[pawnEquipmentIndex].Clone(), // pawn...
-                instructionList[pawnEquipmentIndex + 1].Clone(), // ...equipment
-                new CodeInstruction(OpCodes.Ldarg_0), // this...
-                new CodeInstruction(OpCodes.Ldfld, statWorkerStatField), // ...stat
-                new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(HarmonyPatches), nameof(StatWorkerInjection_BuildShieldString))),
-            }, labelsToTransfer);
+        //    var insertionIndex = instructionList.FindIndex(pawnEquipmentIndex + 3,
+        //        instruction => instruction.labels.Contains(targetLabel));
 
 
+        //    var labelsToTransfer = instructionList.GetRange(pawnEquipmentIndex + 3, insertionIndex - (pawnEquipmentIndex + 3))
+        //        .Where(instruction => instruction.operand is Label)
+        //        .Select(instruction => (Label)instruction.operand);
 
-            return instructionList;
-        }
+        //    instructionList.SafeInsertRange(insertionIndex, new[]
+        //    {
+        //        instructionList[stringBuilderIndex].Clone(), // stringBuilder
+        //        instructionList[pawnEquipmentIndex].Clone(), // pawn...
+        //        instructionList[pawnEquipmentIndex + 1].Clone(), // ...equipment
+        //        new CodeInstruction(OpCodes.Ldarg_0), // this...
+        //        new CodeInstruction(OpCodes.Ldfld, statWorkerStatField), // ...stat
+        //        new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(HarmonyPatches), nameof(StatWorkerInjection_BuildShieldString))),
+        //    }, labelsToTransfer);
+
+
+
+        //    return instructionList;
+        //}
 
         private static void StatWorkerInjection_BuildShieldString(StringBuilder stringBuilder, Pawn_EquipmentTracker equipment, StatDef stat)
         {

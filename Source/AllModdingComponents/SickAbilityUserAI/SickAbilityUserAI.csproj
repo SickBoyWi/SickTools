@@ -4,14 +4,11 @@
   <PropertyGroup>
     <AssemblyName>SickAbilityUserAI</AssemblyName>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RW1.5|AnyCPU'">
-    <OutputPath>..\..\..\1.5\Assemblies\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RW1.6|AnyCPU'">
-    <OutputPath>..\..\..\1.6\Assemblies\</OutputPath>
-  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\SickTools\SickTools.csproj" />
     <ProjectReference Include="..\SickCompAbilityUser\SickCompAbilityUser.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="Lib.Harmony" Version="2.3.1.1" />
   </ItemGroup>
 </Project>

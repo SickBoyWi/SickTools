@@ -3,12 +3,8 @@
   <!-- See also ..\Directory.Build.props, which contains common contents between all the csproj files -->
   <PropertyGroup>
     <AssemblyName>SickAbilityUser</AssemblyName>
-    <Nullable>annotations</Nullable>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RW1.5|AnyCPU'">
-    <OutputPath>..\..\..\1.5\Assemblies\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RW1.6|AnyCPU'">
-    <OutputPath>..\..\..\1.6\Assemblies\</OutputPath>
-  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Update="Lib.Harmony" Version="2.3.1.1" />
+  </ItemGroup>
 </Project>

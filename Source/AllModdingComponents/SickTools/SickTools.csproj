@@ -8,4 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\SickCompAbilityUser\SickCompAbilityUser.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="Lib.Harmony" Version="2.3.1.1" />
+  </ItemGroup>  
 </Project>
