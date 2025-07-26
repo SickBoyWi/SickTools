@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3dvnjKYy2+ducXC2uKOt/qF7LSwnCyn/w30lXDEUQPKwO7EJVtDAd+qXpAZik93Z00+IRoPcDYqCloDT/iTaeA==",
+  "dgSpecHash": "YO3i+B6X7yQ=",
   "success": true,
   "projectFilePath": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\SickTools\\Source\\AllModdingComponents\\SickCompOversizedWeapon\\SickCompOversizedWeapon.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\johnn\\.nuget\\packages\\krafs.rimworld.ref\\1.6.4528\\krafs.rimworld.ref.1.6.4528.nupkg.sha512",
-    "C:\\Users\\johnn\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512"
+    "C:\\Users\\johnn\\.nuget\\packages\\krafs.rimworld.ref\\1.6.4532-beta\\krafs.rimworld.ref.1.6.4532-beta.nupkg.sha512",
+    "C:\\Users\\johnn\\.nuget\\packages\\lib.harmony\\2.3.6\\lib.harmony.2.3.6.nupkg.sha512"
   ],
   "logs": []
 }

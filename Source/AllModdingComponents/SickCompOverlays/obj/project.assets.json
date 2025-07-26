@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
-      "Krafs.Rimworld.Ref/1.6.4528": {
+      "Krafs.Rimworld.Ref/1.6.4532-beta": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -116,26 +116,30 @@
       "Lib.Harmony/2.3.1.1": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/0Harmony.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       }
     }
   },
   "libraries": {
-    "Krafs.Rimworld.Ref/1.6.4528": {
-      "sha512": "u3jrQRxNBk1fEJ+64phjdOUYy60MGUvGegeMwLlZs64wX57Zh6Qz6eDZEHdOrO7tSWDL+riOboD17QKobUu+OA==",
+    "Krafs.Rimworld.Ref/1.6.4532-beta": {
+      "sha512": "o1d77krAgA35jqN3Xh19ew8kQAnt3ordpQe+KBVBb3IiomGvh6TgdHMlga/GAZy88aBgT3XKkPEXwlZBbBLw8w==",
       "type": "package",
-      "path": "krafs.rimworld.ref/1.6.4528",
+      "path": "krafs.rimworld.ref/1.6.4532-beta",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "README.md",
         "icon.png",
-        "krafs.rimworld.ref.1.6.4528.nupkg.sha512",
+        "krafs.rimworld.ref.1.6.4532-beta.nupkg.sha512",
         "krafs.rimworld.ref.nuspec",
         "ref/net472/Assembly-CSharp-firstpass.dll",
         "ref/net472/Assembly-CSharp.dll",
@@ -293,7 +297,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
-      "Krafs.Rimworld.Ref >= 1.6.*",
+      "Krafs.Rimworld.Ref >= 1.6.*-*",
       "Lib.Harmony >= 2.3.1.1"
     ]
   },
@@ -302,7 +306,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.4.1.1",
+    "version": "1.6.0",
     "restore": {
       "projectUniqueName": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\SickTools\\Source\\AllModdingComponents\\SickCompOverlays\\SickCompOverlays.csproj",
       "projectName": "SickCompOverlays",
@@ -335,7 +339,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net472": {
@@ -343,7 +353,7 @@
         "dependencies": {
           "Krafs.Rimworld.Ref": {
             "target": "Package",
-            "version": "[1.6.*, )"
+            "version": "[1.6.*-*, )"
           },
           "Lib.Harmony": {
             "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -351,7 +361,7 @@
             "version": "[2.3.1.1, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

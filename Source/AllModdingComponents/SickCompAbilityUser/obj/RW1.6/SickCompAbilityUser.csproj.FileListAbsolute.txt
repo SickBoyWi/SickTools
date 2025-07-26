@@ -1,4 +1,6 @@
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\1.6\Assemblies\SickAbilityUser.dll
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompAbilityUser\obj\RW1.6\SickCompAbilityUser.csproj.AssemblyReference.cache
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompAbilityUser\obj\RW1.6\SickCompAbilityUser.GeneratedMSBuildEditorConfig.editorconfig
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompAbilityUser\obj\RW1.6\SickCompAbilityUser.AssemblyInfoInputs.cache
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompAbilityUser\obj\RW1.6\SickCompAbilityUser.AssemblyInfo.cs
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickCompAbilityUser\obj\RW1.6\SickCompAbilityUser.csproj.CoreCompileInputs.cache

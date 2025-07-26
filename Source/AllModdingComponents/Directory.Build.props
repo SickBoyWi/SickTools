@@ -6,7 +6,7 @@
     <Configuration Condition=" '$(Configuration)' == '' Or '$(Configuration)' == 'Debug' ">RW1.6</Configuration>
     <TargetFramework>net472</TargetFramework>
     <NoStdLib>true</NoStdLib>
-    <LangVersion>9.0</LangVersion>
+    <LangVersion>10.0</LangVersion>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <Version>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)\..\..\..\About\Version.txt"))</Version>
     <Deterministic>true</Deterministic>
@@ -18,12 +18,13 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <Choose>
-    <When Condition=" '$(Configuration)' == 'RW1.4' ">
+    <When Condition=" '$(Configuration)' == 'RW1.6' ">
       <PropertyGroup>
-        <OutputPath>..\..\..\1.4\Assemblies\</OutputPath>
+        <OutputPath>..\..\..\1.6\Assemblies\</OutputPath>
       </PropertyGroup>
       <ItemGroup>
-        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.*" />
+        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.*-*" />
+        <!-- only stable versions -->
       </ItemGroup>
     </When>
     <When Condition=" '$(Configuration)' == 'RW1.5' ">
@@ -31,19 +32,19 @@
         <OutputPath>..\..\..\1.5\Assemblies\</OutputPath>
       </PropertyGroup>
       <ItemGroup>
-        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.*" />
+        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.*-*" />
       </ItemGroup>
     </When>
-    <When Condition=" '$(Configuration)' == 'RW1.6' ">
+    <When Condition=" '$(Configuration)' == 'RW1.4' ">
       <PropertyGroup>
-        <OutputPath>..\..\..\1.6\Assemblies\</OutputPath>
+        <OutputPath>..\..\..\1.4\Assemblies\</OutputPath>
       </PropertyGroup>
       <ItemGroup>
-        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.*" /><!-- only stable versions -->
+        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.*-*" />
       </ItemGroup>
     </When>
   </Choose>
   <ItemGroup>
-    <PackageReference Include="Lib.Harmony" Version="2.2.*" ExcludeAssets="runtime" />
+    <PackageReference Include="Lib.Harmony" Version="2.3.*" ExcludeAssets="runtime" />
   </ItemGroup>
 </Project>

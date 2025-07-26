@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
-      "Krafs.Rimworld.Ref/1.6.4528": {
+      "Krafs.Rimworld.Ref/1.6.4532-beta": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -113,21 +113,25 @@
           "ref/net472/netstandard.dll": {}
         }
       },
-      "Lib.Harmony/2.2.2": {
+      "Lib.Harmony/2.3.6": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/0Harmony.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       },
-      "SickAbilityUser/1.4.1.1": {
+      "SickAbilityUser/1.6.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
-          "Krafs.Rimworld.Ref": "1.6.0",
-          "Lib.Harmony": "2.2.0"
+          "Krafs.Rimworld.Ref": "1.6.0-0",
+          "Lib.Harmony": "2.3.0"
         },
         "compile": {
           "bin/placeholder/SickAbilityUser.dll": {}
@@ -139,17 +143,17 @@
     }
   },
   "libraries": {
-    "Krafs.Rimworld.Ref/1.6.4528": {
-      "sha512": "u3jrQRxNBk1fEJ+64phjdOUYy60MGUvGegeMwLlZs64wX57Zh6Qz6eDZEHdOrO7tSWDL+riOboD17QKobUu+OA==",
+    "Krafs.Rimworld.Ref/1.6.4532-beta": {
+      "sha512": "o1d77krAgA35jqN3Xh19ew8kQAnt3ordpQe+KBVBb3IiomGvh6TgdHMlga/GAZy88aBgT3XKkPEXwlZBbBLw8w==",
       "type": "package",
-      "path": "krafs.rimworld.ref/1.6.4528",
+      "path": "krafs.rimworld.ref/1.6.4532-beta",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "README.md",
         "icon.png",
-        "krafs.rimworld.ref.1.6.4528.nupkg.sha512",
+        "krafs.rimworld.ref.1.6.4532-beta.nupkg.sha512",
         "krafs.rimworld.ref.nuspec",
         "ref/net472/Assembly-CSharp-firstpass.dll",
         "ref/net472/Assembly-CSharp.dll",
@@ -259,36 +263,55 @@
         "ref/net472/netstandard.dll"
       ]
     },
-    "Lib.Harmony/2.2.2": {
-      "sha512": "70KvWz+DiUELxafsYL/LHxA/jH3PDWeApLo/VwtnrpTvRWQ/eUdPfS/l5funmhZWOy41QXw6UjVv+6C57Nx77A==",
+    "Lib.Harmony/2.3.6": {
+      "sha512": "HqXPz33Z+R8ZDCLS5pJZthg33AMdF1bQXUbz2V7Neb9E+sMQOf4S1wquhM4pLIZFX7BZcOQubclbVreiM1+qmw==",
       "type": "package",
-      "path": "lib.harmony/2.2.2",
+      "path": "lib.harmony/2.3.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "HarmonyLogo.png",
         "LICENSE",
-        "lib.harmony.2.2.2.nupkg.sha512",
+        "README.md",
+        "lib.harmony.2.3.6.nupkg.sha512",
         "lib.harmony.nuspec",
         "lib/net35/0Harmony.dll",
+        "lib/net35/0Harmony.pdb",
         "lib/net35/0Harmony.xml",
-        "lib/net45/0Harmony.dll",
-        "lib/net45/0Harmony.xml",
+        "lib/net452/0Harmony.dll",
+        "lib/net452/0Harmony.pdb",
+        "lib/net452/0Harmony.xml",
         "lib/net472/0Harmony.dll",
+        "lib/net472/0Harmony.pdb",
         "lib/net472/0Harmony.xml",
         "lib/net48/0Harmony.dll",
+        "lib/net48/0Harmony.pdb",
         "lib/net48/0Harmony.xml",
         "lib/net5.0/0Harmony.dll",
+        "lib/net5.0/0Harmony.pdb",
         "lib/net5.0/0Harmony.xml",
         "lib/net6.0/0Harmony.dll",
+        "lib/net6.0/0Harmony.pdb",
         "lib/net6.0/0Harmony.xml",
+        "lib/net7.0/0Harmony.dll",
+        "lib/net7.0/0Harmony.pdb",
+        "lib/net7.0/0Harmony.xml",
+        "lib/net8.0/0Harmony.dll",
+        "lib/net8.0/0Harmony.pdb",
+        "lib/net8.0/0Harmony.xml",
+        "lib/net9.0/0Harmony.dll",
+        "lib/net9.0/0Harmony.pdb",
+        "lib/net9.0/0Harmony.xml",
         "lib/netcoreapp3.0/0Harmony.dll",
+        "lib/netcoreapp3.0/0Harmony.pdb",
         "lib/netcoreapp3.0/0Harmony.xml",
         "lib/netcoreapp3.1/0Harmony.dll",
-        "lib/netcoreapp3.1/0Harmony.xml"
+        "lib/netcoreapp3.1/0Harmony.pdb",
+        "lib/netcoreapp3.1/0Harmony.xml",
+        "lib/netstandard2.0/_._"
       ]
     },
-    "SickAbilityUser/1.4.1.1": {
+    "SickAbilityUser/1.6.0": {
       "type": "project",
       "path": "../SickCompAbilityUser/SickCompAbilityUser.csproj",
       "msbuildProject": "../SickCompAbilityUser/SickCompAbilityUser.csproj"
@@ -296,9 +319,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
-      "Krafs.Rimworld.Ref >= 1.6.*",
-      "Lib.Harmony >= 2.2.*",
-      "SickAbilityUser >= 1.4.1.1"
+      "Krafs.Rimworld.Ref >= 1.6.*-*",
+      "Lib.Harmony >= 2.3.*",
+      "SickAbilityUser >= 1.6.0"
     ]
   },
   "packageFolders": {
@@ -306,7 +329,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.4.1.1",
+    "version": "1.6.0",
     "restore": {
       "projectUniqueName": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\SickTools\\Source\\AllModdingComponents\\SickTools\\SickTools.csproj",
       "projectName": "SickTools",
@@ -343,7 +366,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net472": {
@@ -351,15 +380,15 @@
         "dependencies": {
           "Krafs.Rimworld.Ref": {
             "target": "Package",
-            "version": "[1.6.*, )"
+            "version": "[1.6.*-*, )"
           },
           "Lib.Harmony": {
             "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "target": "Package",
-            "version": "[2.2.*, )"
+            "version": "[2.3.*, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
