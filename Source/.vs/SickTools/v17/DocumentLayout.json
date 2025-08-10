@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\SickTools\\Source\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{417B8649-7A66-4580-8C75-473E46DA9C7A}|AllModdingComponents\\SickCompAbilityUser\\SickCompAbilityUser.csproj|d:\\backup\\modding\\rimworld\\repositories\\sicktools\\source\\allmoddingcomponents\\sickcompabilityuser\\projectiledef_laserprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417B8649-7A66-4580-8C75-473E46DA9C7A}|AllModdingComponents\\SickCompAbilityUser\\SickCompAbilityUser.csproj|solutionrelative:allmoddingcomponents\\sickcompabilityuser\\projectiledef_laserprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC16277-5CB6-4A78-90FB-27F09888708A}|AllModdingComponents\\SickAbilityUserAI\\SickAbilityUserAI.csproj|d:\\backup\\modding\\rimworld\\repositories\\sicktools\\source\\allmoddingcomponents\\sickabilityuserai\\defs\\abilityaidef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC16277-5CB6-4A78-90FB-27F09888708A}|AllModdingComponents\\SickAbilityUserAI\\SickAbilityUserAI.csproj|solutionrelative:allmoddingcomponents\\sickabilityuserai\\defs\\abilityaidef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9A3BF1D4-6693-481F-BBF1-3D66AFD8BE6C}|AllModdingComponents\\SickPawnShields\\SickPawnShields.csproj|d:\\backup\\modding\\rimworld\\repositories\\sicktools\\source\\allmoddingcomponents\\sickpawnshields\\harmonypatches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A3BF1D4-6693-481F-BBF1-3D66AFD8BE6C}|AllModdingComponents\\SickPawnShields\\SickPawnShields.csproj|solutionrelative:allmoddingcomponents\\sickpawnshields\\harmonypatches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,6 +27,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProjectileDef_LaserProjectile.cs",
+              "DocumentMoniker": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\SickTools\\Source\\AllModdingComponents\\SickCompAbilityUser\\ProjectileDef_LaserProjectile.cs",
+              "RelativeDocumentMoniker": "AllModdingComponents\\SickCompAbilityUser\\ProjectileDef_LaserProjectile.cs",
+              "ToolTip": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\SickTools\\Source\\AllModdingComponents\\SickCompAbilityUser\\ProjectileDef_LaserProjectile.cs",
+              "RelativeToolTip": "AllModdingComponents\\SickCompAbilityUser\\ProjectileDef_LaserProjectile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T13:44:39.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AbilityAIDef.cs",
+              "DocumentMoniker": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\SickTools\\Source\\AllModdingComponents\\SickAbilityUserAI\\Defs\\AbilityAIDef.cs",
+              "RelativeDocumentMoniker": "AllModdingComponents\\SickAbilityUserAI\\Defs\\AbilityAIDef.cs",
+              "ToolTip": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\SickTools\\Source\\AllModdingComponents\\SickAbilityUserAI\\Defs\\AbilityAIDef.cs",
+              "RelativeToolTip": "AllModdingComponents\\SickAbilityUserAI\\Defs\\AbilityAIDef.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T15:19:50.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "HarmonyPatches.cs",
               "DocumentMoniker": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\SickTools\\Source\\AllModdingComponents\\SickPawnShields\\HarmonyPatches.cs",
               "RelativeDocumentMoniker": "AllModdingComponents\\SickPawnShields\\HarmonyPatches.cs",
