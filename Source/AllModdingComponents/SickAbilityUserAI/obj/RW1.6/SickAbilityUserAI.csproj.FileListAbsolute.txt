@@ -4,5 +4,5 @@ D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\Si
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickAbilityUserAI\obj\RW1.6\SickAbilityUserAI.AssemblyInfoInputs.cache
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickAbilityUserAI\obj\RW1.6\SickAbilityUserAI.AssemblyInfo.cs
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickAbilityUserAI\obj\RW1.6\SickAbilityUserAI.csproj.CoreCompileInputs.cache
-D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickAbilityUserAI\obj\RW1.6\SickAbil.C934ED3A.Up2Date
 D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickAbilityUserAI\obj\RW1.6\SickAbilityUserAI.dll
+D:\BackUp\Modding\RimWorld\Repositories\SickTools\Source\AllModdingComponents\SickAbilityUserAI\obj\RW1.6\SickAbilityUserAI.csproj.CopyComplete

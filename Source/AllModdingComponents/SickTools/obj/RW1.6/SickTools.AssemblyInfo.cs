@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SickTools")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("RW1.6")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.6.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.6.0.0\r\n+54d21aa207287cdaa9815383d120b1cd191ef684")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.6.0.0\r\n")]
 [assembly: System.Reflection.AssemblyProductAttribute("SickTools")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SickTools")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.6.0.0")]

@@ -3,6 +3,7 @@
   <!-- See also ..\Directory.Build.props, which contains common contents between all the csproj files -->
   <PropertyGroup>
     <AssemblyName>SickAbilityUserAI</AssemblyName>
+    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\SickTools\SickTools.csproj" />

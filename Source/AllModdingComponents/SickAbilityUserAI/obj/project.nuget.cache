@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HjHu8qzaN7g=",
+  "dgSpecHash": "uRF0Om0Q/6PCN+Xx5xho386KzniZuk3VBbte2Aklsvugt1m/AvlfjLf1PFUpqjejdrFB9uSO4h8MzGsDnzmGsQ==",
   "success": true,
   "projectFilePath": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\SickTools\\Source\\AllModdingComponents\\SickAbilityUserAI\\SickAbilityUserAI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\johnn\\.nuget\\packages\\krafs.rimworld.ref\\1.6.4532-beta\\krafs.rimworld.ref.1.6.4532-beta.nupkg.sha512",
+    "C:\\Users\\johnn\\.nuget\\packages\\krafs.rimworld.ref\\1.6.4633\\krafs.rimworld.ref.1.6.4633.nupkg.sha512",
     "C:\\Users\\johnn\\.nuget\\packages\\lib.harmony\\2.3.1.1\\lib.harmony.2.3.1.1.nupkg.sha512"
   ],
   "logs": []

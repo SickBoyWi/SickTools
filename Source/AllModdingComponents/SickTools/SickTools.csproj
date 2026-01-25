@@ -4,6 +4,7 @@
   <PropertyGroup>
     <RootNamespace>SickTools</RootNamespace>
     <AssemblyName>SickTools</AssemblyName>
+    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\SickCompAbilityUser\SickCompAbilityUser.csproj" />

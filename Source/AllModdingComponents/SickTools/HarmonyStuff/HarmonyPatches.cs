@@ -24,6 +24,7 @@ namespace SickTools
             var type = typeof(HarmonyPatches);
 
             HarmonyPatches_StartWithHediff(harmony, type);
+            HarmonyPatches_BrawlerAllowances(harmony, type);
         }
 
         [Conditional("DEBUGLOG")]
@@ -36,8 +37,5 @@ namespace SickTools
         {
             return $"(def={ed.def}, amount={ed.amount}, armorPenetration={ed.armorPenetration}, chance={ed.chance})";
         }
-
-
-
     }
 }
